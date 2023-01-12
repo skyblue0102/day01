@@ -1,10 +1,16 @@
-# 교재 countdown 예제
-# for countdown in 5, 4, 3, 2, 1, "hey!"
-#     print(countdown)
-# print('프로그램 종료')
+# 교재 dictionary 예제
 
-countdown_list = [5, 4, 3, 2, 1, "hey!"]
-for countdown in countdown_list:
-    print(countdown)
-print(countdown_list[3]) #2
-print(countdown_list[-1]) #2
+subjects = {
+    '의사소통 영어' : 'A+',
+    '오래된 미래' : 'B+',
+    '양자역학' : 'A0',
+}
+student = '김도훈'
+subject = '오래된 미래'
+print(student, '학생의', subject, '과목 성적은', subjects[subject], '입니다')
+#old style
+print("%s 학생의 %s 과목 성적은 %s입니다" % (student, subject, subjects[subject]))
+#modern style (format 함수)
+print("{0} 학생의 {1} 과목 성적은 {2}입니다".format(student, subject, subjects[subject]))
+#ultra modern style (f스트링)
+print(f'{student} 학생의 {subject} 과목 성적은 {subjects[subject]}입니다')
